@@ -1,0 +1,28 @@
+# Color configuration for AiRS.
+#
+# AiRS tries to print colorful messages to your terminal or other front-end. It
+# supports the 16 ANSI colors. For its own printing, though, it gives aliases to
+# the colors so that you, the user, can customize the colors to your liking.
+#
+# The supported ANSI colors are:
+#
+#  black   gray
+#  maroon  red
+#  green   lime
+#  gold    yellow
+#  purple  magenta
+#  navy    blue
+#  teal    cyan
+#  silver  white
+#  clear
+#
+# "clear" just resets the color to your terminal's default.
+{
+	"notice" : "lime",
+	"error"  : "red",
+	"user"   : "cyan",
+	"bot"    : "red",
+	"text"   : "white",
+}
+
+# vim:ft=javascript

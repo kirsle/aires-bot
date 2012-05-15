@@ -1,0 +1,98 @@
+# Chatterbot Configuration File
+#
+# This file represents a single chatterbot. A "chatterbot" in this context
+# refers to one bot that has its own unique name and personality (including
+# reply base). One chatterbot may have multiple connections to multiple
+# listeners. This means you only need multiple chatterbots if you are running
+# multiple distinct robot personalities.
+{
+	# Personality information
+	"name": "Sample Robot",
+
+	# The brain param is an array of:
+	#   1) The name of the brain
+	#   n) Any params this brain requires (for e.g. RiveScript requires the
+	#      directory where your *.rs files are stored)
+	# The RiveScript brain is used by default. The Eliza one is here too,
+	# commented out, for another example. You can only specify ONE brain at
+	# a time!
+	"brain": [ "RiveScript", "./replies/aiden" ],
+	# "brain": [ "Eliza" ],
+
+	# This bot's listeners. "Listeners" are the individual connections to
+	# instant messengers or other interfaces where the bots can be chatted
+	# with.
+	"listeners": {
+		# The keys here are the names of the listeners (for e.g. AIM, there
+		# should be a "listeners/AIM.pm" for it to actually work).
+
+		"AIM": {
+			# AIM shared settings. This is not where the screen name and
+			# password goes; see below.
+			"icon":    "./res/AIM/icons/default.jpg",     # AIM buddy icon
+			"profile": "./res/AIM/profiles/default.html", # AIM buddy profile
+			"font":    {
+				# Font settings for this bot's IM's.
+				"family":  "Verdana",      # Font face
+				"size":    2,              # Font size (HTML value)
+				"color":   "#0099FF",      # Font color
+				"bgcolor": "#FFFFFF",      # Background color
+				"bold":    1,              # Bold
+				"italic":  0,              # Italicized
+				"under":   0,              # Underlined
+				"strike":  0,              # Strike-out
+			},
+
+			# This is where your screen names and passwords go.
+			"mirrors": [
+				# Remove the "#" below and fill in your AIM bot's
+				# information to sign on an AIM bot.
+				#{ "username": "SampleAIM", "password": "B1g_Secr3t"  },
+			],
+		},
+
+		"YMSG": {
+			# Yahoo Messenger shared settings.
+			"picture": "./res/YMSG/pictures/default.png",
+			"font":    {
+				"family": "Trebuchet MS", # Font face
+				"size":   12,             # Font size (point value)
+				"color":  "#0099FF",      # Color
+				"bold":   1,              # Bold
+				"italic": 0,              # Italic
+				"under":  0,              # Underline
+			},
+
+			# Mirrors.
+			"mirrors": [
+				# Remove the "#" below and fill in your Yahoo bot's
+				# information to sign on an Yahoo bot.
+				#{ "username": "SampleYMSG", "password": "B1g_Secr3t" },
+			],
+		},
+
+		# MSN Messenger hasn't been implemented yet...
+		"MSN": {
+			# MSN shared settings.
+			"picture": "./res/MSN/pictures/default.png",
+			"nick":    "Aiden",
+			"font":    {
+				"family": "Verdana",
+				"color":  "FF9900",  # MSN colors are backwards, BBGGRR instead of RRGGBB
+				"bold":   1,
+				"italic": 0,
+				"under":  0,
+				"strike": 0,
+			},
+
+			# This is where your screen names and passwords go.
+			"mirrors": [
+				# Remove the "#" below and fill in your MSN bot's
+				# information to sign on an AIM bot.
+				#{ "username": "sample@msn.com", "password": "B1g_Secr3t" },
+			],
+		},
+	},
+}
+
+# vim:ft=javascript

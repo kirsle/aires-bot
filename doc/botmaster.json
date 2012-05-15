@@ -1,0 +1,29 @@
+# Botmaster configuration for AiRS.
+#
+# This file defines who the botmaster of your bot is. The botmaster is you, the
+# owner of the bot.
+#
+# AiRS signs on to multiple messaging protocols, for example, AOL Instant
+# Messenger. If you, the botmaster, have an AIM screen name, you should add it
+# to this config file. The format for a user name is as follows:
+#
+#   LISTENER-username
+#
+# The LISTENER is always in all caps, and the username is always lowercased.
+# Here are examples:
+#
+#   AIM-botmaster12
+#   MSN-botmaster12@live.com
+#   IRC-botmaster12
+#   ICQ-123456789
+#
+# Take notice that some messengers are "less secure" than others. For example,
+# on IRC, you should make sure that your botmaster nick is registered so that
+# nobody else can use it.
+[
+	# These are examples, and are commented out so they don't take effect.
+	# "AIM-botmaster12",
+	# "MSN-botmaster12@live.com",
+]
+
+# vim:ft=javascript
