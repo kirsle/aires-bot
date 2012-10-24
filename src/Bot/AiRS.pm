@@ -228,11 +228,10 @@ sub init {
 					$self->{mirrors}->{$username} = {
 						listener => $ns->new (
 							id       => $username,
-							username => $mirror->{username},
-							password => $mirror->{password},
 							online   => 0,
 							bot      => $bot,
 							parent   => $self,
+							%{$mirror}, # username, password, etc.
 						),
 						bot      => $bot,
 					};

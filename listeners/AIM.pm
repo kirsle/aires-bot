@@ -16,7 +16,7 @@ TODO
 
 =head1 AUTHOR
 
-Casey Kirsle
+Noah Petherbridge
 
 Module uses L<Net::OSCAR>.
 

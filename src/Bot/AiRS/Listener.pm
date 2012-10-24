@@ -27,12 +27,11 @@ sub new {
 	my %opts   = @_;
 
 	my $self = {
-		id       => $opts{id},
-		username => $opts{username},
-		password => $opts{password},
+		id       => delete $opts{id},
 		online   => 0,
-		bot      => $opts{bot},
-		_parent  => $opts{parent},
+		bot      => delete $opts{bot},
+		_parent  => delete $opts{parent},
+		%opts,
 	};
 	bless ($self,$class);
 

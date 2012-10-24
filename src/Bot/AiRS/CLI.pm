@@ -36,6 +36,11 @@ sub process {
 		'color!'  => \$opts{color},
 	);
 
+	# If using colors on Win32, we need an extra module.
+	if ($opts{color} && $^O eq "MSWin32") {
+		require Win32::Console::ANSI;
+	}
+
 	return \%opts;
 }
 
