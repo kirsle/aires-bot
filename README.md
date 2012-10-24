@@ -1,9 +1,9 @@
 Aires Bot
 =========
 
-A multiprotocol Perl chatbot for AIM, Yahoo and others. It supports connections
-to multiple networks ("listeners") and can run multiple bots with distinct
-brains and personalities, including RiveScript and Eliza.
+A multiprotocol Perl chatbot for AIM, Yahoo, XMPP and others. It supports
+connections to multiple networks ("listeners") and can run multiple bots with
+distinct brains and personalities, including RiveScript and Eliza.
 
 Listeners and brains are pluggable, and new ones can be added simply by dropping
 a module in the appropriate folder (or writing one if one doesn't exist).
@@ -64,6 +64,21 @@ If all goes well, your bots should sign on!
 
 For Windows users, the file "win32-cli.bat" may simply be double-clicked on to
 run the bot.
+
+Caveats
+=======
+
+The AIM listener included in this repo uses `Net::OSCAR` and is pretty stable
+and featureful. The YMSG listener however uses a beta quality module that I
+helped write, `Net::IM::YMSG`.
+
+Known issues with `Net::IM::YMSG` is that when the bot receives an add request,
+the bot won't appear online for the new user until the bot is restarted.
+Sending and receiving messages and typing notifications, however, works just
+fine. If the add contact bug is a problem for you, I recommend using the
+XMPP listener instead, in conjunction with an XMPP server such as Openfire
+(http://www.igniterealtime.org/projects/openfire/) and Gateways to sign your
+bot on to Yahoo via your XMPP server.
 
 License
 =======

@@ -51,6 +51,18 @@
 			],
 		},
 
+		"XMPP": {
+			# XMPP shared settings.
+			"resource": "Aires Bot",
+
+			# Mirrors.
+			"mirrors": [
+				# Remove the "#" below and fill in your XMPP bot's
+				# information to sign on an XMPP bot.
+				#{ "username": "chatbot@jabber.org", "password": "B1g_Secr3t" },
+			]
+		},
+
 		"YMSG": {
 			# Yahoo Messenger shared settings.
 			"picture": "./res/YMSG/pictures/default.png",
