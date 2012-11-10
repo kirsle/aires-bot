@@ -146,8 +146,8 @@ sub init {
 		# File exists?
 		if (-f "./conf/$cfg.json") {
 			# In memory? Delete.
-			delete $self->{$cfg};
 			$self->print("{c:error}:: {c:text}Reading: conf/$cfg.json");
+			delete $self->{$cfg};
 			$self->{$cfg} = $self->readConfig("./conf/$cfg.json");
 		}
 		else {
