@@ -1,6 +1,11 @@
 Aires Bot
 =========
 
+**This project is abandoned.** It has been re-implemented in Python. See
+[aires](https://github.com/kirsle/aires).
+
+--------------------------------------------------------------------------------
+
 A multiprotocol Perl chatbot for AIM, Yahoo, XMPP and others. It supports
 connections to multiple networks ("listeners") and can run multiple bots with
 distinct brains and personalities, including RiveScript and Eliza.
